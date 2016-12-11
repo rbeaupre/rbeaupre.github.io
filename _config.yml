@@ -6,5 +6,10 @@ description: >  Hustle Hunt is a productivity app dedicated to helping side hust
 url: "www.hustlehunt.com" # the base hostname & protocol for your site
 # twitter_username:
 # github_username:
+social:
+  name: Renaud Beaupre
+  links:
+    - https://angel.co/renaud-beaupre
+    - https://www.linkedin.com/in/BenBalter
 gems:
   - jekyll-seo-tag
