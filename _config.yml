@@ -1,7 +1,7 @@
 # Site settings
 title: Hustle Hunt
 email: renaud.beaupre@gmail.com
-description: >  Hustle Hunt is a productivity app dedicated to helping side hustlers find new product ideas
+description: Hustle Hunt is a productivity app dedicated to helping side hustlers find new product ideas
 # baseurl: "" # the subpath of your site, e.g. /blog/
 url: "www.hustlehunt.com" # the base hostname & protocol for your site
 # twitter_username:
