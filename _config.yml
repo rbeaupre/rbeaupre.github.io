@@ -1,9 +1,9 @@
 # Site settings
 title: Hustle Hunt
 email: renaud.beaupre@gmail.com
-description: > Web-based productivity tool based on Amazon.com products reviews designed to help side hustlers come up with new ideas for products to sell online
+description: >  Hustle Hunt is a productivity app dedicated to helping side hustlers find new product ideas
 # baseurl: "" # the subpath of your site, e.g. /blog/
-url: "www.hsutlehunt.com" # the base hostname & protocol for your site
+url: "www.hustlehunt.com" # the base hostname & protocol for your site
 # twitter_username:
 # github_username:
 gems:
