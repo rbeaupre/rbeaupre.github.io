@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -169,7 +169,7 @@
 
 
     .card {
-      display: inline-block;
+      display: none;
       max-width: 33%;
       /*margin-right: 5px;*/
     }
@@ -426,6 +426,10 @@
       </div>
     </div>
 
+    <p style="text-align:center; margin: 50px;">
+      <button styles="margin:0 auto;" type="button" class="btn btn-primary load-more">Load More Products</button>  
+    </p>
+    
 
     <footer class="footer">
       <p>&copy; Hustle Hunt 2016</p>
@@ -440,16 +444,46 @@
 
 
   <script type="text/javascript">
-     $(function() {
-        $('.ratings').each(function(i, select) {
-          $(select).barrating({
-            theme: 'fontawesome-stars-o',
-            showSelectedRating: false,
-            initialRating: $(select).data("current-rating"),
+    $(function() {
+      var cards = $(".card");
+      var currentSet = 0
+
+      function showSet(cards, num) {
+        $.each(cards, function(ind, el) {
+          $(el).css("display", "none");
+        });
+
+        var currentIndex = currentSet * num
+
+        if (currentIndex >= cards.length) {
+          currentSet = 0;
+          currentIndex = currentSet * num
+        }
+        
+        for(var i = currentIndex; i < currentIndex + num; i++) {
+          if (i < cards.length) {
+
+            $(cards[i]).css("display", "inline-block");
+            
+          }
+        }
+        currentSet += 1;
+      } 
+      showSet(cards, 9);
+
+      $("button.load-more").click(function(e) {
+        showSet(cards, 9);
+      });
+
+      $('.ratings').each(function(i, select) {
+        $(select).barrating({
+          theme: 'fontawesome-stars-o',
+          showSelectedRating: false,
+          initialRating: $(select).data("current-rating"),
             onSelect: function() {}
-          });
-        })
-     });
+        });
+      })
+    });
   </script>
 
 </body>
