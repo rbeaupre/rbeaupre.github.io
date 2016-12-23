@@ -473,6 +473,7 @@
 
       $("button.load-more").click(function(e) {
         showSet(cards, 9);
+        $("html, body").animate({ scrollTop: 0 }, "fast");
       });
 
       $('.ratings').each(function(i, select) {
